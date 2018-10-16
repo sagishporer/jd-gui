@@ -70,7 +70,7 @@ class ContainerPanelFactoryProvider implements PanelFactory {
                 return subMap.withDefault { subKey ->
                     def array = new ArrayList()
                     subMap.put(subKey, array)
-                    return array
+                    return (Collection)array
                 }
             }
             // Index populating value automatically
